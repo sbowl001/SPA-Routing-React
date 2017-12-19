@@ -10,14 +10,21 @@ import {
     BrowserRouter as Router,
     Route,
 } from 'react-router-dom';  
-
+import Movies from './components/Movies';
+import MovieDetails from './components/MovieDetails';
+import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore); //??
+
+function NavBar(){
+  return <div>Navigation Bar</div>
+}
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <Router>
       <div>
+        <NavBar />
         <Route exact path="/" component={App} />
         <Route exact path="/movies" component={Movies} />
         <Route path="/movies/:id" component={MovieDetail} />
@@ -26,3 +33,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );  
+
