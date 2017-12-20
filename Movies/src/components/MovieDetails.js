@@ -27,4 +27,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps, { setSelectedMovie})(MovieDetail); ///>
+export default connect(mapStateToProps, { setSelectedMovie})(MovieDetail);  
