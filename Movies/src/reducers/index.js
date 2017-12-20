@@ -12,7 +12,14 @@ const MoviesReducer = (movies = [], action) => {
     }
 };
 
-
+const SelectedMovieReducer = (selectedMovie = null, action) => { ///
+    switch (action.type) {
+        case SET_SELECTED_MOVIE: 
+        return action.payload.data;
+        default: 
+        return selectedMovie;
+    }
+};
 const rootReducer = combineReducers({
     movies: MoviesReducer,
     selectedMovie: SelectedMovieReducer,

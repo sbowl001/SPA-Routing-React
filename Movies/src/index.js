@@ -25,9 +25,8 @@ ReactDOM.render(
     <Router>
       <div>
         <NavBar />
-        <Route exact path="/" component={App} />
-        <Route exact path="/movies" component={Movies} />
-        <Route path="/movies/:id" component={MovieDetail} />
+        <Route exact path="/" component={Movies} />
+        <Route path="/movies/:id" component={MovieDetails} />
       </div>
     </Router>
   </Provider>,
